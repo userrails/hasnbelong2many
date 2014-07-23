@@ -1,0 +1,3 @@
+class SecondsController < ApplicationController
+
+end

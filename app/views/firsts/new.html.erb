@@ -1,0 +1,19 @@
+<%= params.inspect %>
+<%= form_for @first do |f|%>
+ <p>name of first</p>
+ 
+ <p>
+  <%= f.text_field :name %>
+ </p>
+ 
+ <p>Please choose second categories:</p>
+ 
+ <% @seconds.each do |second| %>
+  <p>    
+    <%=check_box_tag "first[second_ids][]", second.id, @first.seconds.include?(second.id) %> <%= second.name%>
+  </p>
+ <% end %>
+ <p>
+  <%= f.submit %>
+ </p>
+<% end %>

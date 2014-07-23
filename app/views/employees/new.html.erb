@@ -1,0 +1,18 @@
+<%= form_for @employee do |f|%>
+  <%= f.text_field :name, :placeholder=>"name" %> <br/>
+  <%= f.text_field :age, :placeholder=>"age" %> <br/>
+  <%= f.text_area :address, :rows=>"6", :placeholder=>"address", :class=>"ckeditor" %> <br/>
+  <%= f.submit %>
+<% end %>
+
+<script type="text/javascript">
+  $("#employee_address123").tinymce({
+    theme: "modern",
+    toolbar: "bold,italic,underline,|,bullist,numlist,outdent,indent,|,undo,redo,|,pastetext,pasteword,selectall,|,uploadimage",
+    pagebreak_separator: "<p class='page-separator'>&nbsp;</p>",
+    plugins: ["uploadimage"],
+    relative_urls: false,
+    remove_script_host: false,
+    document_base_url: (!window.location.origin ? window.location.protocol + "//" + window.location.host : window.location.origin) + "/",
+  });
+</script>

@@ -1,0 +1,14 @@
+<%= link_to "new first entry", new_first_path %>
+<br/><br/>
+
+<table border="1">
+<tr>
+  <th>Name:</th>
+</tr>
+<% @firsts.each do |first|%>
+<tr>
+ <td><%= first.name %></td>
+</tr>
+<% end%>
+
+</table>

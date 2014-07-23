@@ -1,0 +1,12 @@
+<h1>Images#index</h1>
+<p>Find me in app/views/images/index.html.erb</p>
+
+<%= link_to "New image path", new_image_path %>
+
+<div style="margin-top: 10px;">
+  <div class="upload">
+    <% @images.each do |image| %>
+      <%= image_tag image.image.url(:original) %>
+    <% end %>
+  </div>
+</div>
